@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import DisplayData from "./DisplayData"; 
-import '../index.css'; 
-
+import DisplayData from "./DisplayData";
+import "../index.css";
+import Footer from "./Footer";
 
 class Form extends Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class Form extends Component {
       job: "",
       birth: "",
       password: "",
-      submittedData: [], 
+      submittedData: [],
     };
   }
 
@@ -23,7 +23,7 @@ class Form extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-   
+
     this.setState((prevState) => ({
       submittedData: [
         ...prevState.submittedData,
@@ -33,7 +33,7 @@ class Form extends Component {
           city: prevState.city,
           job: prevState.job,
           birth: prevState.birth,
-          password: prevState.password
+          password: prevState.password,
         },
       ],
       name: "",
@@ -128,7 +128,6 @@ class Form extends Component {
           <button type="submit">Enviar</button>
         </form>
 
-       
         {this.state.submittedData.length > 0 && (
           <div>
             {/* <h2>Dados Submetidos:</h2> */}
@@ -137,6 +136,8 @@ class Form extends Component {
             ))}
           </div>
         )}
+
+        <Footer />
       </div>
     );
   }

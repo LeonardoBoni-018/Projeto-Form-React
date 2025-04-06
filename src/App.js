@@ -5,7 +5,7 @@ import Form from './components/Form';
 const App = () => {
   return (
     <div>
-      <h1>Formulário de Cadastro</h1>
+      <h1>Formulário de cadastro com React</h1>
       <Form />
     </div>
   );
