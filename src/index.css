@@ -1,89 +1,105 @@
-/* index.css */
-
-/* Estilo geral do corpo */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Roboto', sans-serif;
+  background-color: #eaeaea;
   margin: 0;
   padding: 20px;
 }
-/* Estilo do contêiner principal */
+
 h1 {
   text-align: center;
   color: #333;
+  margin-bottom: 20px;
 }
 
-/* Estilo do formulário */
 form {
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
   margin: 0 auto;
+  transition: transform 0.3s;
 }
 
-/* Estilo dos rótulos */
+form:hover {
+  transform: scale(1.02);
+}
+
 label {
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
+  color: #555;
 }
 
-/* Estilo dos campos de entrada */
 input[type="text"],
 input[type="email"],
 input[type="date"],
 input[type="password"] {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
   box-sizing: border-box;
+  transition: border-color 0.3s;
 }
 
-/* Estilo do botão de envio */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
 button {
-  background-color: #28a745;
+  background-color: #007bff;
   color: white;
-  padding: 10px 15px;
+  padding: 12px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
-  background-color: #218838;
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
-/* Estilo da exibição dos dados submetidos */
-div > h2 {
+div>h2 {
   margin-top: 20px;
   color: #333;
 }
 
-div > p {
-  background: #e9ecef;
-  padding: 10px;
-  border-radius: 4px;
+div>p {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
   margin: 5px 0;
+  border-left: 5px solid #007bff;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-/* Estilo do footer */
+div>p:hover {
+  background-color: #e2e6ea;
+  transform: scale(1.02);
+}
+
 .footer {
   text-align: center;
   padding: 20px;
-  background-color: #fff;
-  color: black;
+  background-color: #ffffff;
+  color: #333;
   position: relative;
-  bottom: 0; 
-  width: 100%; 
-  margin-top: 20px; 
+  bottom: 0;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .footer p {
-  margin: 5px 0; 
+  margin: 5px 0;
 }
